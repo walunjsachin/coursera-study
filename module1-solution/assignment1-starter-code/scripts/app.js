@@ -11,9 +11,11 @@ function LunchCheckController($scope){
   {
       if($scope.ItemsInLunch=='')
       {
+        $scope.state = 'red';  // bonus property to set color
         $scope.message = 'Please enter data first';
         return;
       }
+
       var strings = $scope.ItemsInLunch.split(',');
       var correctcount=0;  // this is handle no item between some commas inputs
       for(var i=0;i<strings.length;i++)
@@ -25,12 +27,18 @@ function LunchCheckController($scope){
 
       }
 
-      if(correctcount<=3)
+      if(correctcount==0)
       {
-        $scope.message = 'Enjoy!';
+        $scope.state = 'red';  // bonus property to set color
+        $scope.message = 'Please enter data first';
       }
-      else
+      else if(correctcount<=3)
         {
+          $scope.state = 'green';  // bonus property to set color 
+          $scope.message = 'Enjoy!';
+        }
+      else  {
+          $scope.state = 'green';
           $scope.message = 'Too much!';
         }
 
