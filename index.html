@@ -1,4 +1,18 @@
+<html ng-app="MyApp">
+<body ng-controller="MyController">
 <h1>Hello Coursera!</h1>
 <h1> Now from Atom </h1>
 <h2> Using Browser Sync to see latest changes </h2>
-<h2>works</h2>
+<h2>{{name | currency : '$' : 3}}</h2>
+<div>
+  {{sendmsg();}}
+
+  <br/>
+  {{"Hello" | custom : "Real"}}
+  <br/>
+  {{"Hello Sachin" | replace: "Sachin" : "test" | uppercase}}
+</div>
+</body>
+<script src="angular.min.js"></script>
+<script src="app.js"></script>
+</html>
