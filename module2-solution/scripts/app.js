@@ -46,7 +46,7 @@ function ShoppingListCheckOffService()
     {
       name: "Water",
       quantity: "20 bottles"
-    }
+    },
     {
       name: "Apples",
       quantity: "20 apples"
