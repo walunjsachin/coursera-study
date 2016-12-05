@@ -42,7 +42,16 @@ function ShoppingListCheckOffService()
     {
       name: "Chips",
       quantity: "2 bags"
-    }];
+    },
+    {
+      name: "Water",
+      quantity: "20 bottles"
+    }
+    {
+      name: "Apples",
+      quantity: "20 apples"
+    }
+  ];
 
     var boughtlist = [];
 
