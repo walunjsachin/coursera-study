@@ -1,0 +1,26 @@
+<html ng-app="MyApp">
+<head>
+</head>
+<body ng-controller="MyController">
+  <div>
+  <h1> Test Week 2</h1>
+    <button ng-click="CheckWatcher();"> Check Watcher</button>
+    <br/>
+  <button ng-click="IncrementCounter();"> IncrementCounter</button>
+{{Counter}}
+<br/>
+<ul>
+  <li ng-repeat="item in myList">{{ item }}</li>
+</ul>
+<br>
+<ul>
+  <li ng-repeat="item in myList2"> First Name : {{ item.fname }} , Last Name : {{item.lname}}</li>
+</ul>
+<input type="text" ng-model="newFname" placeholder="Enter First Name"/>
+<input type="text" ng-model="newLname" placeholder="Enter Last Name"/>
+<button ng-click="AddMember();">Add Member</button>
+  <script src="angular.min.js"></script>
+  <script src="app.js"> </script>
+</div>
+</body>
+</html>
